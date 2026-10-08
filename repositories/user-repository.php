@@ -1,8 +1,17 @@
-<?php
-
-$users = [
-  ["id" => 1, "name" => "Admin Utama",    "email" => "admin@ski.sch.id",               "role" => "admin"],
-  ["id" => 2, "name" => "Budi Santoso",   "email" => "budi.santoso@siswa.ski.sch.id",  "role" => "member"],
-  ["id" => 3, "name" => "Siti Aminah",    "email" => "siti.aminah@siswa.ski.sch.id",   "role" => "member"],
-  ["id" => 4, "name" => "Richard Marcell","email" => "richard.m@ski.sch.id",           "role" => "admin"],
-];
+<?php require_once __DIR__ . '/../config/bootstrap.php';
+function getUsers(?string $search = null): array
+{
+    $d = db();
+    return array_values(array_map(fn($u) => array_diff_key($u, ['password' => true]), array_filter($d['users'], fn($u) => !$search || stripos($u['name'] . ' ' . $u['email'], $search) !== false)));
+}
+function getUser(int $id): ?array
+{
+    $u = findById(db()['users'], $id);
+    if ($u)
+        unset($u['password']);
+    return $u;
+}
+{
+    $u = findById(db()['users'], $id);
+    return ['phone' => $u['phone'] ?? '', 'address' => $u['address'] ?? '', 'bio' => $u['bio'] ?? ''];
+}

@@ -1,0 +1,136 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Kelvin",
+            "email": "kelvin@immanuel.sch.id",
+            "password": "$2y$12$ovPWWfR0CRyRQ1iU6iND9.i0QlD5QyfI2kuWcE0Qb4zyFI0Fn7any",
+            "role": "admin",
+            "phone": "081234567890",
+            "address": "Jl. Visi No. 1, Pontianak",
+            "bio": "Administrator Sistem Immanuel Library"
+        },
+        {
+            "id": 2,
+            "name": "Siswa Immanuel",
+            "email": "siswa@immanuel.sch.id",
+            "password": "$2y$12$QteMWUyG7jNzEbXlozee1ehiwuddqAGH0LMlxpIotGK98wHBzsrJG",
+            "role": "member",
+            "phone": "",
+            "address": "",
+            "bio": ""
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "name": "Pemrograman",
+            "description": "Buku-buku tentang bahasa pemrograman."
+        },
+        {
+            "id": 2,
+            "name": "Web Development",
+            "description": "Pengembangan aplikasi berbasis web."
+        },
+        {
+            "id": 3,
+            "name": "Jaringan Komputer",
+            "description": "Infrastruktur dan konsep jaringan."
+        },
+        {
+            "id": 4,
+            "name": "Fiksi",
+            "description": "Novel, cerpen, dan karya fiksi."
+        }
+    ],
+    "authors": [
+        {
+            "id": 1,
+            "name": "Andrea Hirata",
+            "bio": "Penulis novel Indonesia."
+        },
+        {
+            "id": 2,
+            "name": "Tere Liye",
+            "bio": "Penulis novel Indonesia."
+        },
+        {
+            "id": 3,
+            "name": "J.K. Rowling",
+            "bio": "Penulis seri Harry Potter."
+        },
+        {
+            "id": 4,
+            "name": "Pramoedya Ananta Toer",
+            "bio": "Sastrawan Indonesia."
+        },
+        {
+            "id": 5,
+            "name": "Sapardi Djoko Damono",
+            "bio": "Penyair dan sastrawan Indonesia."
+        }
+    ],
+    "books": [
+        {
+            "id": 1,
+            "title": "Laskar Pelangi",
+            "isbn": "978-979-3062-79-2",
+            "year": 2005,
+            "stock": 12,
+            "category_id": 4,
+            "description": "Novel tentang persahabatan dan perjuangan pendidikan.",
+            "author_ids": [
+                1
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Bumi",
+            "isbn": "978-602-03-0112-9",
+            "year": 2014,
+            "stock": 8,
+            "category_id": 4,
+            "description": "Novel petualangan fantasi remaja.",
+            "author_ids": [
+                2
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Harry Potter dan Batu Bertuah",
+            "isbn": "978-979-22-1782-8",
+            "year": 1997,
+            "stock": 5,
+            "category_id": 4,
+            "description": "Awal petualangan Harry Potter di dunia sihir.",
+            "author_ids": [
+                3
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Bumi Manusia",
+            "isbn": "978-979-97312-3-4",
+            "year": 1980,
+            "stock": 6,
+            "category_id": 4,
+            "description": "Novel sejarah tentang Minke dan kehidupan Hindia Belanda.",
+            "author_ids": [
+                4
+            ]
+        },
+        {
+            "id": 5,
+            "title": "Antologi Rasa Nusantara",
+            "isbn": "978-602-1234-56-7",
+            "year": 2021,
+            "stock": 4,
+            "category_id": 4,
+            "description": "Kumpulan karya sastra dari penulis Nusantara.",
+            "author_ids": [
+                4,
+                5
+            ]
+        }
+    ]
+}

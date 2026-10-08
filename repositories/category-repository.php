@@ -1,8 +1,3 @@
-<?php
-
-$categories = [
-  ["id" => 1, "name" => "Fiksi",     "description" => "Novel dan cerita rekaan",        "total_books" => 3],
-  ["id" => 2, "name" => "Sains",     "description" => "Buku ilmu pengetahuan alam",      "total_books" => 0],
-  ["id" => 3, "name" => "Sejarah",   "description" => "Buku sejarah dan biografi",       "total_books" => 1],
-  ["id" => 4, "name" => "Teknologi", "description" => "Buku pemrograman dan teknologi",  "total_books" => 0],
-];
+<?php require_once __DIR__.'/../config/bootstrap.php';
+function getCategories(?string $search=null): array { $d=db(); return array_values(array_filter($d['categories'],fn($c)=>!$search||stripos($c['name'].' '.$c['description'],$search)!==false)); }
+function getCategory(int $id): ?array { return findById(db()['categories'],$id); }

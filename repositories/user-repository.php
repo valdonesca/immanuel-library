@@ -11,6 +11,7 @@ function getUser(int $id): ?array
         unset($u['password']);
     return $u;
 }
+function getProfile(int $id): array
 {
     $u = findById(db()['users'], $id);
     return ['phone' => $u['phone'] ?? '', 'address' => $u['address'] ?? '', 'bio' => $u['bio'] ?? ''];

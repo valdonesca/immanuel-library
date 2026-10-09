@@ -11,7 +11,7 @@ function seedData(): array
     $hash = password_hash('password123', PASSWORD_DEFAULT);
     return [
         'users' => [
-            ['id' => 1, 'name' => 'Kelvin', 'email' => 'kelvin@immanuel.sch.id', 'password' => $hash, 'role' => 'admin', 'phone' => '081234567890', 'address' => 'Jl. Visi No. 1, Pontianak', 'bio' => 'Administrator Sistem Immanuel Library'],
+            ['id' => 1, 'name' => 'Revaldo', 'email' => 'revaldo@immanuel.sch.id', 'password' => $hash, 'role' => 'admin', 'phone' => '081234567890', 'address' => 'Jl.Dr.Wahidin Komp. Batara Indah 1 Blok c 9', 'bio' => 'Administrator Sistem Immanuel Library'],
             ['id' => 2, 'name' => 'Siswa Immanuel', 'email' => 'siswa@immanuel.sch.id', 'password' => password_hash('password123', PASSWORD_DEFAULT), 'role' => 'member', 'phone' => '', 'address' => '', 'bio' => ''],
         ],
         'categories' => [

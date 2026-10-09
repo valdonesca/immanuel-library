@@ -2,12 +2,12 @@
     "users": [
         {
             "id": 1,
-            "name": "Kelvin",
-            "email": "kelvin@immanuel.sch.id",
+            "name": "Revaldo",
+            "email": "revaldo@immanuel.sch.id",
             "password": "$2y$12$ovPWWfR0CRyRQ1iU6iND9.i0QlD5QyfI2kuWcE0Qb4zyFI0Fn7any",
             "role": "admin",
             "phone": "081234567890",
-            "address": "Jl. Visi No. 1, Pontianak",
+            "address": "Jl.Dr.Wahidin Komp. Batara Indah 1 Blok c 9",
             "bio": "Administrator Sistem Immanuel Library"
         },
         {

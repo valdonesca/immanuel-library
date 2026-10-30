@@ -1,5 +1,12 @@
 <?php
 require_once __DIR__ . "/helpers/auth.php";
+require_once __DIR__ . "/config/database.php";
+$stats = [
+  "books" => (int) $pdo->query("SELECT COUNT(*) FROM books")->fetchColumn(),
+  "categories" => (int) $pdo->query("SELECT COUNT(*) FROM categories")->fetchColumn(),
+  "authors" => (int) $pdo->query("SELECT COUNT(*) FROM authors")->fetchColumn(),
+  "users" => (int) $pdo->query("SELECT COUNT(*) FROM users")->fetchColumn(),
+];
 
 $title = "Beranda - Immanuel Library";
 
@@ -54,19 +61,19 @@ $title = "Beranda - Immanuel Library";
   <section class="section">
     <div class="stats-grid">
       <div class="stat-card">
-        <div class="stat-number">1.240</div>
+        <div class="stat-number"><?= number_format($stats["books"], 0, ",", ".") ?></div>
         <div class="stat-label">Total Judul Buku</div>
       </div>
       <div class="stat-card">
-        <div class="stat-number">18</div>
+        <div class="stat-number"><?= number_format($stats["categories"], 0, ",", ".") ?></div>
         <div class="stat-label">Kategori Buku</div>
       </div>
       <div class="stat-card">
-        <div class="stat-number">64</div>
+        <div class="stat-number"><?= number_format($stats["authors"], 0, ",", ".") ?></div>
         <div class="stat-label">Penulis Terdaftar</div>
       </div>
       <div class="stat-card">
-        <div class="stat-number">312</div>
+        <div class="stat-number"><?= number_format($stats["users"], 0, ",", ".") ?></div>
         <div class="stat-label">Anggota Aktif</div>
       </div>
     </div>
